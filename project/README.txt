@@ -1,0 +1,11 @@
+contributors: zgrove, cmanvt14
+url:
+
+This project will provide a text-based Pokemon game where the user
+can battle with certain Pokemon and catch wild Pokemon. We will use
+the string-parsing strategies learned over the semester, such as using
+grep, sed, and read, to calculate damage done in battle or the catch
+rate of a wild Pokemon. In addition, we will follow the rules of the
+Unix philosophy, such as the rule of modularity and the rule of simplicity,
+to write a simple template that can be used to represent any Pokemon and a
+script to simulate a battle.
