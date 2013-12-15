@@ -35,3 +35,12 @@ class Stats(object):
 	def getSpeed(self):
 		"""Returns Speed"""
 		return self.speed
+
+	def __str__(self):
+		"""Prints out all stats in organized manner"""
+		print ("HP: " + self.hp)
+		print ("Attack: " + self.attack)
+		print ("Defense: " + self.defense)
+		print ("Special Attack: " + self.spAttack)
+		print ("Special Defense: " + self.spDefense)
+		print ("Speed: " + self.speed)
