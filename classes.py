@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
-from enum import Enum
+Types = ['Fire', 'Water', 'Grass', 'Electric', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Psychic', 'Ice', 'Dragon', 'Steel', 'Dark', 'None']
 
-Type = Enum('Fire', 'Water', 'Grass', 'Electric', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Psychic', 'Ice', 'Dragon', 'Steel', 'Dark', 'None')
-
-class Stats(Object):
+class Stats(object):
 	"""Constructs a class for the Pokemon's stats"""
 
 	def __init__(self, hp, attack, defense, spAttack, spDefense, speed):
@@ -49,18 +47,33 @@ class Stats(Object):
 		print ("Special Defense: " + self.spDefense)
 		print ("Speed: " + self.speed)
 
-class Pokemon(Object):
+class Pokemon(object):
 	"""Describes a Pokemon"""
 	
-	def __init__(self, name, currentHp, faint):
+	def __init__(self, name, type1, type2, moves, stats):
 		"""Init method for initializing Pokemon Class"""
 		self.name = name
-		self.currentHp = currentHp
-		self.faint = faint
+		self.type1 = type1
+		self.type2 = type2
+		self.moves = moves
+		self.currentHp = stats.getHp()
+		self.faint = False
 
 	def getName(self):
 		"""Returns Pokemon's name"""
 		return self.name
+
+	def getType1(self):
+		return self.type1
+
+	def getType2(self):
+		return self.type2
+
+	def getMove(self, index):
+		return moves.get(index)
+
+	def getStats(self):
+		return stats
 
 	def getCurrentHp(self):
 		"""Returns Pokemon's current HP"""
@@ -69,3 +82,45 @@ class Pokemon(Object):
 	def getFaint(self):
 		"""Returns Pokemon's Faint status"""
 		return self.faint
+	
+	def fainted(self):
+		self.faint = True
+
+class Move(object):
+	"""Describes a move a Pokemon can use"""
+
+	def __init__(self, name, type, power, accuracy, description, category):
+		self.name = name
+		self.type = type
+		if power < 0:
+			self.power = 0
+		elif power > 250:
+			self.power = 250
+		else:
+			self.power = power
+		if accuracy < 50:
+			self.accuracy = 50
+		elif accuracy > 100:
+			self.accuracy = 100
+		else:
+			self.accuracy = accuracy
+		self.description = description
+		self.category = category
+	
+	def getName(self):
+		return self.name
+
+	def getType(self):
+		return self.type
+
+	def getPower(self):
+		return self.power
+
+	def getAccuracy(self):
+		return self.accuracy
+
+	def getDescription(self):
+		return self.description
+
+	def getCategory(self):
+		return self.category
