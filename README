@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 TEXT-BASED POKEMON
 
 contributors: zgrove, cmanvt14
 url:
+=======
+Text-based Pokemon
+
+contributors: cmanvt14, zgrove
+url: 
+>>>>>>> 83800f14351609bc4c8eb5ee17f06030bc2502cf
 
 This project will provide a text-based Pokemon game where the user
 can battle with certain Pokemon and catch wild Pokemon. We will use
