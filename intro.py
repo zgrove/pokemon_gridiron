@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 def intro():
+	"""This is the introduction for Pokemon Gridiron"""
+	
 	import time
 
 	print()
