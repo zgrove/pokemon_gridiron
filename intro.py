@@ -66,19 +66,33 @@ print("   .. 7. .         ..I M$DMNDNM8$7$N~~:~~~~N7777$77$8NM..$..             
 print("  .  :, .          ..  .......,77$7N77:~~:$7DOI$8......  7..             .,,M..I")
 print("  . 8.  ..         .+.........,777777$M:8D777777D....... .N              .:..Z.M")
 print("   7....,.        .,.....,..::=777$7I$$7$77$7$77D. .~,......             .,...ZM")
+
+time.sleep(2)
 print()
 
-A_button = input("Hello there! Welcome to the world of Pokemon! \/")
-A_button = input("My name is OAK! People call me the POKEMON PROF! \/")
-A_button = input("This world is inhabited by creatures called POKEMON! \/")
-A_button = input("For some people, POKEMON are pets. Others use them for fights. \/")
+A_button = input("Hello there! Welcome to the world of Pokemon!")
+A_button = input("My name is OAK! People call me the POKEMON PROF!")
+A_button = input("This world is inhabited by creatures called POKEMON!")
+A_button = input("For some people, POKEMON are pets. Others use them for fights.")
 A_button = input("Myself... I study POKEMON as a profession.")
 player_name = input("First, what is your name? ")
 
 while player_name == "":
     player_name = input("Don't be shy! What's your name? ")
 
-A_button = input("Right! So your name is " + player_name + "! \/")
+A_button = input("Right! So your name is " + player_name + "!")
 print()
-print("This is my grandson. He's been your rival since you were a baby.")
 
+A_button = input("This is my grandson. He's been your rival since you were a baby.")
+rival_name = input("... Erm, what is his name again? ")
+
+while rival_name == "":
+    rival_name = input("Oh, you must know! What's his name? ")
+
+A_button = input("That's right! I remember now! His name is " + rival_name + "!")
+
+print()
+A_button = input(player_name + "!")
+A_button = input("Your very own POKEMON legend is about to unfold!")
+A_button = input("A world of dreams and adventures with POKEMON awaits!")
+A_button = input("Let's go!")
