@@ -53,6 +53,7 @@ class Pokemon(object):
 	def __init__(self, name, type1, type2, moves, stats):
 		"""Init method for initializing Pokemon Class"""
 		self.name = name
+		self.level = 50
 		self.type1 = type1
 		self.type2 = type2
 		self.moves = moves
@@ -63,16 +64,24 @@ class Pokemon(object):
 		"""Returns Pokemon's name"""
 		return self.name
 
+	def getLevel(self):
+		"""Returns a Pokemon's level"""
+		return self.level
+
 	def getType1(self):
+		"""Returns a Pokemon's 1st type"""
 		return self.type1
 
 	def getType2(self):
+		"""Returns a Pokemon's 2nd type"""
 		return self.type2
 
 	def getMove(self, index):
+		"""Returns a Pokemon's move (1-4 depending on index value)"""
 		return moves.get(index)
 
 	def getStats(self):
+		"""Returns a Pokemon's stats"""
 		return stats
 
 	def getCurrentHp(self):
@@ -84,12 +93,14 @@ class Pokemon(object):
 		return self.faint
 	
 	def fainted(self):
+		"""Sets Pokemon's Faint status to True"""
 		self.faint = True
 
 class Move(object):
 	"""Describes a move a Pokemon can use"""
 
 	def __init__(self, name, type, power, accuracy, description, category):
+		"""Initializes Pokemon move"""
 		self.name = name
 		self.type = type
 		if power < 0:
@@ -108,19 +119,25 @@ class Move(object):
 		self.category = category
 	
 	def getName(self):
+		"""Returns move name"""
 		return self.name
 
 	def getType(self):
+		"""Returns move type"""
 		return self.type
 
 	def getPower(self):
+		"""Returns move's power"""
 		return self.power
 
 	def getAccuracy(self):
+		"""Return's move's accuracy"""
 		return self.accuracy
 
 	def getDescription(self):
+		"""Returns move description"""
 		return self.description
 
 	def getCategory(self):
+		"""Returns move category (special or physical"""
 		return self.category

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-TEXT-BASED POKEMON
+POKEMON GRIDIRON: TEXT-BASED POKEMON
 
 contributors: zgrove, cmanvt14
-url:
-=======
-Text-based Pokemon
-
-contributors: cmanvt14, zgrove
-url: 
->>>>>>> 83800f14351609bc4c8eb5ee17f06030bc2502cf
+url: https://github.com/zgrove/pokemon_gridiron
 
 This project will provide a text-based Pokemon game where the user
 can battle with certain Pokemon and catch wild Pokemon. We will use
