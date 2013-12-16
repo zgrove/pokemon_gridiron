@@ -22,8 +22,6 @@ types = {'Fire': [['Grass', 'Bug', 'Ice', 'Steel'], ['Fire', 'Water', 'Rock', 'D
          'Steel': [['Rock', 'Ice'], ['Fire', 'Water', 'Electric', 'Steel'], []],
          'Dark': [['Ghost', 'Psychic'], ['Fighting', 'Steel', 'Dark'], []]}
 
-#print randint(217, 255)
-
 def dealDamage(level, attackStat, attackPower, defPokeDefense, stab, effectiveness):
 	"""This fxn calculates & returns how much damage the attacking Pokemon deals the defending Pokemon"""
 	r = random.randint(217, 255)
