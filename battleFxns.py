@@ -4,6 +4,24 @@ from math import floor
 from random import randint
 import classes
 
+types = {'Fire': [['Grass', 'Bug', 'Ice', 'Steel'], ['Fire', 'Water', 'Rock', 'Dragon'], []],
+         'Water': [['Fire', 'Ground', 'Rock'], ['Water', 'Grass', 'Dragon'], []],
+         'Grass': [['Water', 'Ground', 'Rock'], ['Fire', 'Grass', 'Flying', 'Poison', 'Bug', 'Dragon', 'Steel'], []],
+         'Electric': [['Water', 'Flying'], ['Grass', 'Electric', 'Dragon'], ['Ground']],
+         'Normal': [[], ['Rock', 'Steel'], ['Ghost']],
+         'Fighting': [['Normal', 'Rock', 'Ice', 'Steel', 'Dark'], ['Flying', 'Poison', 'Bug', 'Psychic'], ['Ghost']],
+         'Flying': [['Grass', 'Fighting', 'Bug'], ['Electric', 'Rock', 'Steel'], []],
+         'Poison': [['Grass'], ['Poison', 'Ground', 'Rock', 'Ghost'], ['Steel']],
+         'Ground': [['Fire', 'Electric', 'Poison', 'Rock', 'Steel'], ['Grass', 'Bug'], ['Flying']],
+         'Rock': [['Fire', 'Flying', 'Bug', 'Ice'], ['Fighting', 'Ground', 'Steel'], []],
+         'Bug': [['Grass', 'Psychic', 'Dark'], ['Fire', 'Fighting', 'Flying', 'Poison', 'Ghost', 'Steel'], []],
+         'Ghost': [['Ghost', 'Psychic'], ['Steel', 'Dark'], ['Normal']],
+         'Psychic': [['Fighting', 'Poison'], ['Psychic', 'Steel'], ['Dark']],
+         'Ice': [['Grass', 'Flying', 'Ground', 'Dragon'], ['Fire', 'Water', 'Ice', 'Steel'], []],
+         'Dragon': [['Dragon'], ['Steel'], []],
+         'Steel': [['Rock', 'Ice'], ['Fire', 'Water', 'Electric', 'Steel'], []],
+         'Dark': [['Ghost', 'Psychic'], ['Fighting', 'Steel', 'Dark'], []]}
+
 #print randint(217, 255)
 
 def dealDamage(level, attackStat, attackPower, defPokeDefense, stab, effectiveness):
@@ -23,34 +41,22 @@ def calcSTAB(pokeType, moveType):
 
 def calcEffectiveness(moveType, defPokeType1, defPokeType2):
 	"""This fxn determines if the attack is 'not very effective', 'super effective', etc."""
-	# Fire Move
-	if moveType == classes.Types[0]:
-		if defPoketype1 == classes.Types[0] or defPoketype2 == classes.Types[0]:
-			effectiveness = 0.5
-		elif defPoketype1 == classes.Types[1] or defPoketype2 == classes.Types[1]:
-			effectiveness = 0.5
-		elif defPoketype1 == classes.Types[2] or defPoketype2 == classes.Types[2]:
-                        effectiveness = 2
-		else:
-			effectiveness = 1
-	# Water Move
-	if moveType == classes.Types[1]: 
-                if defPoketype1 == classes.Types[0] or defPoketype2 == classes.Types[0]:
-                        effectiveness = 2
-                elif defPoketype1 == classes.Types[1] or defPoketype2 == classes.Types[1]:
-                        effectiveness = 0.5
-                elif defPoketype1 == classes.Types[2] or defPoketype2 == classes.Types[2]:
-                        effectiveness = 0.5  
-                else:   
-                        effectiveness = 1
-	# Grass Move
-	if moveType == classes.Types[2]: 
-                if defPoketype1 == classes.Types[0] or defPoketype2 == classes.Types[0]:
-                        effectiveness = 0.5
-                elif defPoketype1 == classes.Types[1] or defPoketype2 == classes.Types[1]:
-                        effectiveness = 2
-                elif defPoketype1 == classes.Types[2] or defPoketype2 == classes.Types[2]:
-                        effectiveness = 0.5  
-                else:   
-                        effectiveness = 1
+
+	move_effect = types[moveType]
+	effectiveness = 1
+
+	if defPokeType1 in move_effect[0]:
+		effectiveness = effectiveness * 2
+	elif defPokeType1 in move_effect[1]:
+		effectiveness = effectiveness * 0.5
+	elif defPokeType1 in move_effect[2]:
+		effectiveness = effectiveness * 0
+
+	if defPokeType2 in move_effect[0]:
+                effectiveness = effectiveness * 2
+        elif defPokeType2 in move_effect[1]:
+                effectiveness = effectiveness * 0.5
+        elif defPokeType2 in move_effect[2]:
+                effectiveness = effectiveness * 0
+	
 	return effectiveness

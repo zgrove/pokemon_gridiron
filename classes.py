@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-Types = ['Fire', 'Water', 'Grass', 'Electric', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Psychic', 'Ice', 'Dragon', 'Steel', 'Dark', 'None']
-
 class Stats(object):
 	"""Constructs a class for the Pokemon's stats"""
 
