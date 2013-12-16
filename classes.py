@@ -10,7 +10,7 @@ class Stats(object):
 		self.defense = defense
 		self.spAttack = spAttack
 		self.spDefense = spDefense
-		seld.speed = speed
+		self.speed = speed
 
 	def getHp(self):
 		"""Returns HP"""
@@ -76,11 +76,11 @@ class Pokemon(object):
 
 	def getMove(self, index):
 		"""Returns a Pokemon's move (1-4 depending on index value)"""
-		return moves.get(index)
+		return self.moves[index - 1]
 
 	def getStats(self):
 		"""Returns a Pokemon's stats"""
-		return stats
+		return self.stats
 
 	def getCurrentHp(self):
 		"""Returns Pokemon's current HP"""
