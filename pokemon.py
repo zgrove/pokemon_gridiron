@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
 from intro import intro
+from choose1 import prebattle
 
-intro()
+rival_name = intro()
+prebattle(rival_name)

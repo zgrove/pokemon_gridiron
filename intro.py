@@ -92,7 +92,7 @@ def intro():
 	while rival_name == "":
 		rival_name = input("Oh, you must know! What's his name? ")
 	
-	A_button = input("That's right! I remember now! His name is " + rival_name  + " !")
+	A_button = input("That's right! I remember now! His name is " + rival_name  + "!")
 	print()
 	A_button = input(player_name + "!")
 	A_button = input("Your very own POKEMON legend is about to unfold!")
