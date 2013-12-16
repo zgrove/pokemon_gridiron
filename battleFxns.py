@@ -53,10 +53,10 @@ def calcEffectiveness(moveType, defPokeType1, defPokeType2):
 		effectiveness = effectiveness * 0
 
 	if defPokeType2 in move_effect[0]:
-                effectiveness = effectiveness * 2
-        elif defPokeType2 in move_effect[1]:
-                effectiveness = effectiveness * 0.5
-        elif defPokeType2 in move_effect[2]:
-                effectiveness = effectiveness * 0
-	
+		effectiveness = effectiveness * 2
+	elif defPokeType2 in move_effect[1]:
+		effectiveness = effectiveness * 0.5
+	elif defPokeType2 in move_effect[2]:
+		effectiveness = effectiveness * 0
+
 	return effectiveness
