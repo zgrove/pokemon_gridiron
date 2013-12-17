@@ -57,4 +57,11 @@ def calcEffectiveness(moveType, defPokeType1, defPokeType2):
 	elif defPokeType2 in move_effect[2]:
 		effectiveness = effectiveness * 0
 
+	if effectiveness > 1:
+		print ("It's super effective!")
+	elif effectiveness == 0.5:
+		print ("It's not very effective...")
+	elif effectivenss == 0:
+		print ("It has no effect...")
+
 	return effectiveness

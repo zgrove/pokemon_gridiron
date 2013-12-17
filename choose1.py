@@ -10,7 +10,7 @@ def prebattle(rival_name):
 	"""This fxn allows the user and rival to choose a Pokemon"""
 	decision = 'n'
 	while decision != 'y':
-		print ("Please choose a Pokemon to be your partner:")
+		print ("Please choose a POKEMON to be your partner:")
 		print()
 		for items in pokeList:
 			print (items)
@@ -26,7 +26,7 @@ def prebattle(rival_name):
 					validChoice = True
 			if validChoice == False:
 				print ()
-				print ("That Pokemon is not discovered yet. Please choose one of the following:")
+				print ("That POKEMON is not discovered yet. Please choose one of the following:")
 				print ()
 				for items in pokeList:
 					print (items)

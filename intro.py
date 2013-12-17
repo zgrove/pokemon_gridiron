@@ -73,7 +73,7 @@ def intro():
 	time.sleep(2)
 	print()
 
-	A_button = input("Hello there! Welcome to the world of Pokemon!")
+	A_button = input("Hello there! Welcome to the world of POKEMON!")
 	A_button = input("My name is OAK! People call me the POKEMON PROF!")
 	A_button = input("This world is inhabited by creatures called POKEMON!")
 	A_button = input("For some people, POKEMON are pets. Others use them for fights.")
