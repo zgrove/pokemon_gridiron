@@ -8,6 +8,7 @@ nameList = ["Venusaur", "Charizard", "Blastoise", "Pikachu", "Dragonite", "Macha
 
 def prebattle(rival_name):
 	"""This fxn allows the user and rival to choose a Pokemon"""
+	pokeList = createPokemon()
 	decision = 'n'
 	while decision != 'y':
 		print ("Please choose a POKEMON to be your partner:")

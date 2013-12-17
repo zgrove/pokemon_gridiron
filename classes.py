@@ -56,7 +56,7 @@ class Pokemon(object):
 		self.type2 = type2
 		self.moves = moves
 		self.currentHp = stats.getHp()
-		self.faint = False
+		self.stats = stats
 
 	def getName(self):
 		"""Returns Pokemon's name"""
@@ -86,13 +86,15 @@ class Pokemon(object):
 		"""Returns Pokemon's current HP"""
 		return self.currentHp
 
-	def getFaint(self):
-		"""Returns Pokemon's Faint status"""
-		return self.faint
+	def takeDamage(self, damage):
+		if (damage > self.currentHp):
+			self.currentHp = 0
+		else:
+			self.currentHp = self.currentHp - damage
 	
-	def fainted(self):
-		"""Sets Pokemon's Faint status to True"""
-		self.faint = True
+	def isFainted(self):
+		"""Sees if Pokemon fainted"""
+		return self.currentHp == 0
 
 class Move(object):
 	"""Describes a move a Pokemon can use"""

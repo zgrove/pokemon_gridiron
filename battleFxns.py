@@ -24,8 +24,8 @@ types = {'Fire': [['Grass', 'Bug', 'Ice', 'Steel'], ['Fire', 'Water', 'Rock', 'D
 
 def dealDamage(level, attackStat, attackPower, defPokeDefense, stab, effectiveness):
 	"""This fxn calculates & returns how much damage the attacking Pokemon deals the defending Pokemon"""
-	r = random.randint(217, 255)
-	damage = math.floor(((((2*level/5+2)*attackStat*attackPower/defPokeDefense)/50)+2)*stab*effectiveness*r/255)
+	r = randint(217, 255)
+	damage = floor(((((2*level/5+2)*attackStat*attackPower/defPokeDefense)/50)+2)*stab*effectiveness*r/255)
 	return damage
 
 def calcSTAB(pokeType, moveType):
@@ -61,7 +61,9 @@ def calcEffectiveness(moveType, defPokeType1, defPokeType2):
 		print ("It's super effective!")
 	elif effectiveness == 0.5:
 		print ("It's not very effective...")
-	elif effectivenss == 0:
+	elif effectiveness == 0:
 		print ("It has no effect...")
+
+	print()
 
 	return effectiveness
