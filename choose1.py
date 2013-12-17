@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
-import pokemon_choose
+from pokemon_choose import *
+from random import randint
+import time
+
+nameList = ["Venusaur", "Charizard", "Blastoise", "Pikachu", "Dragonite", "Machamp"]
 
 def prebattle(rival_name):
 	"""This fxn allows the user and rival to choose a Pokemon"""
@@ -29,5 +33,21 @@ def prebattle(rival_name):
 				print ()
 				userPoke = input()
 		decision = input ("So you choose " + userPoke + "? ('y' or 'n') ")
+	
+	randomName = userPoke
+	while randomName == userPoke:
+		randomName = nameList[randint(0, 5)]
 
-pokeList = ["Venusaur", "Charizard", "Blastoise", "Pikachu", "Machamp", "Dragonite"]
+	print()
+	A_button = input("Rival " + rival_name + ": OK! Well, I chose " + pokeList[randomName].getName() + "!")
+	A_button = input("Rival " + rival_name + ": He's obviously gonna trump your weak little " + pokeList[userPoke].getName() + "!")
+	A_button = input("Rival " + rival_name + ": Let's battle!")
+	time.sleep(0.5)
+	print(".")
+	time.sleep(0.5)
+	print(".")
+	time.sleep(0.5)
+	print(".")
+	print()
+
+	return [pokeList[userPoke], pokeList[randomName]]

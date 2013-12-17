@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
+import time
+
 def intro():
 	"""This is the introduction for Pokemon Gridiron"""
-	
-	import time
 
 	print()
 	print("                              .;:**'                          ")
@@ -98,4 +98,5 @@ def intro():
 	A_button = input("Your very own POKEMON legend is about to unfold!")
 	A_button = input("A world of dreams and adventures with POKEMON awaits!")
 	A_button = input("Let's go!")
+	print()
 	return rival_name

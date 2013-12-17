@@ -3,4 +3,6 @@ from intro import intro
 from choose1 import prebattle
 
 rival_name = intro()
-prebattle(rival_name)
+chosen_Pokemon = prebattle(rival_name)
+
+print("Player: " + chosen_Pokemon[0].getName() + " " + str(chosen_Pokemon[0].getMove(3).getPower()))

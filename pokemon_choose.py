@@ -40,4 +40,5 @@ Pikachu = Pokemon("Pikachu", "Electric", "None", [Thunder, VoltTackle, IronTail,
 Dragonite = Pokemon("Dragonite", "Dragon", "Flying", [HyperBeam, IceBeam, DragonClaw, Waterfall], Dragonite_stats)
 Machamp = Pokemon("Machamp", "Fighting", "None", [CrossChop, ThunderPunch, IcePunch, Earthquake], Machamp_stats)
 
-print(Charizard.getMove(1).getPower())
+
+pokeList = {"Venusaur": Venusaur, "Blastoise": Blastoise, "Charizard": Charizard, "Pikachu": Pikachu, "Dragonite": Dragonite, "Machamp": Machamp}
